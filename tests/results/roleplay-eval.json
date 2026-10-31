@@ -1,0 +1,429 @@
+{
+  "date": "2026-10-31T06:51:48.554Z",
+  "completed": 20,
+  "total": 20,
+  "flagged": 20,
+  "note": "Flag rate is not validated error-detection accuracy. Inspect whether each correction actually identifies the seeded error. Max comparison not run.",
+  "results": [
+    {
+      "id": 1,
+      "input": "커피을 한 잔 주세요.",
+      "error": "커피을",
+      "category": "object particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "커피을 한 잔 주세요.",
+        "corrected": "커피를 한 잔 주세요.",
+        "explanation": "The object particle depends on the last sound of the noun. Use 을 after a consonant and 를 after a vowel. 커피 ends in a vowel, so it takes 를."
+      },
+      "reply": "커피는 아메리카노와 라떼가 있어요. 어떤 거 드릴까요?",
+      "difficulty": "same",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 2,
+      "input": "아메리카노 한 잔를 주세요.",
+      "error": "잔를",
+      "category": "object particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "아메리카노 한 잔를 주세요.",
+        "corrected": "아메리카노 한 잔 주세요.",
+        "explanation": "잔 ends in a consonant, so the object particle would be 을 (한 잔을), not 를. In natural speech, the particle is usually dropped: 아메리카노 한 잔 주세요."
+      },
+      "reply": "네, 아메리카노 한 잔이요. 따뜻한 거 드릴까요, 아이스 드릴까요?",
+      "difficulty": "same",
+      "goalsMet": [
+        true,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 3,
+      "input": "라떼 두 잔이 주세요.",
+      "error": "잔이",
+      "category": "object particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "라떼 두 잔이 주세요.",
+        "corrected": "라떼 두 잔 주세요.",
+        "explanation": "When ordering with a counter like 잔 (cups) before 주세요, leave off the subject particle 이. Just say \"두 잔 주세요.\""
+      },
+      "reply": "라떼 두 잔이요. 따뜻한 거 드릴까요, 아이스 드릴까요?",
+      "difficulty": "same",
+      "goalsMet": [
+        true,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 4,
+      "input": "저은 따뜻한 차를 원해요.",
+      "error": "저은",
+      "category": "topic particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "저은 따뜻한 차를 원해요.",
+        "corrected": "저는 따뜻한 차를 원해요.",
+        "explanation": "After a word ending in a vowel like 저, use the topic particle 는, not 은. 은 follows a consonant."
+      },
+      "reply": "따뜻한 차요, 4000원이에요. 드시고 가세요?",
+      "difficulty": "same",
+      "goalsMet": [
+        true,
+        true,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 5,
+      "input": "이 커피는 맛있어요요.",
+      "error": "맛있어요요",
+      "category": "duplicate polite ending",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "이 커피는 맛있어요요.",
+        "corrected": "이 커피는 맛있어요.",
+        "explanation": "The polite ending 요 was typed twice. You only need it once: 맛있어요. To order, you can say the drink name plus 주세요."
+      },
+      "reply": "네, 맛있어요! 아메리카노 드릴까요, 라테 드릴까요?",
+      "difficulty": "easier",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 6,
+      "input": "여기에 커피를 마실게요.",
+      "error": "여기에",
+      "category": "action location particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "여기에 커피를 마실게요.",
+        "corrected": "여기서 커피를 마실게요.",
+        "explanation": "Use 에서 (shortened to 여기서) for the place where an action happens, like drinking. 에 is for where something exists or where you are going."
+      },
+      "reply": "네, 여기서 드실 거죠? 아메리카노하고 라떼 중에 어떤 커피 드릴까요?",
+      "difficulty": "same",
+      "goalsMet": [
+        false,
+        false,
+        true
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 7,
+      "input": "저는 카페를에 갈 거예요.",
+      "error": "카페를에",
+      "category": "malformed destination particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "저는 카페를에 갈 거예요.",
+        "corrected": "저는 카페에 갈 거예요.",
+        "explanation": "Use only one particle here. 에 marks the destination you are going to, so drop 를: 카페에 (to the café). Also, you are already in the café, so try ordering a drink next."
+      },
+      "reply": "네, 카페에 오셨네요! 무슨 음료 드릴까요?",
+      "difficulty": "easier",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 8,
+      "input": "얼음를 빼 주세요.",
+      "error": "얼음를",
+      "category": "object particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "얼음를 빼 주세요.",
+        "corrected": "얼음을 빼 주세요.",
+        "explanation": "The object particle is 을 after a noun ending in a consonant, like 얼음, and 를 after a vowel. So it should be 얼음을."
+      },
+      "reply": "네, 얼음 빼 드릴게요. 어떤 음료로 드릴까요?",
+      "difficulty": "easier",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 9,
+      "input": "우유을 넣어 주세요.",
+      "error": "우유을",
+      "category": "object particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "우유을 넣어 주세요.",
+        "corrected": "우유를 넣어 주세요.",
+        "explanation": "After a noun ending in a vowel, like 우유, use the object particle 를. Use 을 only after a consonant, as in 물을."
+      },
+      "reply": "우유요? 그럼 라떼 드릴까요?",
+      "difficulty": "easier",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 10,
+      "input": "설탕를 넣지 마세요.",
+      "error": "설탕를",
+      "category": "object particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "설탕를 넣지 마세요.",
+        "corrected": "설탕을 넣지 마세요.",
+        "explanation": "설탕 ends in a consonant (ㅇ), so it takes the object particle 을, not 를. Use 를 only after nouns ending in a vowel."
+      },
+      "reply": "네, 설탕 없이 해 드릴게요. 어떤 음료 드릴까요?",
+      "difficulty": "same",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 11,
+      "input": "차가 너무 뜨겁어요.",
+      "error": "뜨겁어요",
+      "category": "irregular conjugation",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "차가 너무 뜨겁어요.",
+        "corrected": "차가 너무 뜨거워요.",
+        "explanation": "뜨겁다 (to be hot) is an ㅂ-irregular verb. Before -어요, ㅂ changes to 우, so it becomes 뜨거워요."
+      },
+      "reply": "아, 차 드릴까요?",
+      "difficulty": "easier",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 12,
+      "input": "아이스커피가 너무 차갑어요.",
+      "error": "차갑어요",
+      "category": "irregular conjugation",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "아이스커피가 너무 차갑어요.",
+        "corrected": "아이스커피가 너무 차가워요.",
+        "explanation": "차갑다 is an irregular ㅂ verb. Before -어요, the ㅂ changes to 우, so 차갑- + -어요 becomes 차가워요."
+      },
+      "reply": "아, 그러세요? 아메리카노, 라테, 차 중에 뭐 드릴까요?",
+      "difficulty": "easier",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 13,
+      "input": "컵가 작아요.",
+      "error": "컵가",
+      "category": "subject particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "컵가 작아요.",
+        "corrected": "컵이 작아요.",
+        "explanation": "The subject particle is 이 after a word ending in a consonant. Use 가 after a word ending in a vowel. Since 컵 ends in ㅂ, it should be 컵이."
+      },
+      "reply": "아메리카노, 라떼, 차 중에 뭐 드릴까요?",
+      "difficulty": "easier",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 14,
+      "input": "라떼이 얼마예요?",
+      "error": "라떼이",
+      "category": "subject particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "라떼이 얼마예요?",
+        "corrected": "라떼는 얼마예요?",
+        "explanation": "라떼 ends in a vowel, so the subject particle is 가, not 이 (라떼가). When asking a price, the topic particle 는 is more common (라떼는 얼마예요?)."
+      },
+      "reply": "라떼는 5,000원이에요. 라떼로 드릴까요?",
+      "difficulty": "same",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 15,
+      "input": "이것는 제 커피예요?",
+      "error": "이것는",
+      "category": "topic particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "이것는 제 커피예요?",
+        "corrected": "이것은 제 커피예요?",
+        "explanation": "After a noun ending in a consonant (것), use the topic particle 은, not 는. In casual speech you can also say 이거 제 커피예요?"
+      },
+      "reply": "아직 주문 안 하셨어요. 어떤 음료 드릴까요?",
+      "difficulty": "easier",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 16,
+      "input": "그거을 포장해 주세요.",
+      "error": "그거을",
+      "category": "object particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "그거을 포장해 주세요.",
+        "corrected": "그거를 포장해 주세요.",
+        "explanation": "The object particle depends on the final sound of the noun. 그거 ends in a vowel, so use 를, not 을. In casual speech, 그걸 is also common."
+      },
+      "reply": "네, 포장이요. 어떤 음료 드릴까요?",
+      "difficulty": "easier",
+      "goalsMet": [
+        false,
+        false,
+        true
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 17,
+      "input": "저는 커피를 마시고 싶어요습니다.",
+      "error": "싶어요습니다",
+      "category": "malformed ending",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "저는 커피를 마시고 싶어요습니다.",
+        "corrected": "저는 커피를 마시고 싶어요.",
+        "explanation": "You combined two polite endings, -어요 and -습니다. Use only one: 싶어요 (polite, everyday) or 싶습니다 (formal). Both are correct on their own."
+      },
+      "reply": "커피요? 아메리카노와 라떼가 있어요. 어떤 거 드릴까요?",
+      "difficulty": "same",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 18,
+      "input": "아메리카노 한 잔 주세요요.",
+      "error": "주세요요",
+      "category": "duplicate polite ending",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "아메리카노 한 잔 주세요요.",
+        "corrected": "아메리카노 한 잔 주세요.",
+        "explanation": "There's an extra '요' at the end. 주세요 already includes the polite ending, so just say 주세요."
+      },
+      "reply": "네, 아메리카노 한 잔이요. 따뜻한 걸로 드릴까요, 아이스로 드릴까요?",
+      "difficulty": "same",
+      "goalsMet": [
+        true,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 19,
+      "input": "저는 카드으로 계산할게요.",
+      "error": "카드으로",
+      "category": "instrument particle",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "저는 카드으로 계산할게요.",
+        "corrected": "저는 카드로 계산할게요.",
+        "explanation": "After a noun ending in a vowel (카드), use '로' instead of '으로'. '으로' follows nouns ending in a consonant, except ㄹ."
+      },
+      "reply": "네, 카드 좋아요! 그런데 먼저 어떤 음료 드릴까요?",
+      "difficulty": "same",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    },
+    {
+      "id": 20,
+      "input": "저는 빵을 커피하고 같이 먹고 싶어해요.",
+      "error": "싶어해요",
+      "category": "first-person desire construction",
+      "flagged": true,
+      "correction": {
+        "hasError": true,
+        "original": "저는 빵을 커피하고 같이 먹고 싶어해요.",
+        "corrected": "저는 빵을 커피하고 같이 먹고 싶어요.",
+        "explanation": "Use -고 싶어요 for your own wishes. -고 싶어해요 is used to describe what someone else wants."
+      },
+      "reply": "죄송하지만 빵은 없어요, 아메리카노하고 라테 중에 어떤 커피 드릴까요?",
+      "difficulty": "easier",
+      "goalsMet": [
+        false,
+        false,
+        false
+      ],
+      "requiresHumanReview": true
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+/* Duolingo-style skin for Bridge so it matches the course shell (style.css):
+   Nunito heavy type, Feather green, 2px #e5e5e5 borders, rounded cards,
+   3D buttons with a darker bottom edge, green/red answer feedback. */
+:root{--ink:#3c3c3c;--muted:#777;--line:#e5e5e5;--paper:#fff;--teal:#58cc02;--mint:#d7ffb8;--peach:#fff4e0;--red:#ea2b2b;--yellow:#fff5d3;
+  --green:#58cc02;--green-deep:#46a302;--blue:#1cb0f6;--blue-deep:#1899d6}
+body{font-family:Nunito,system-ui,sans-serif;font-weight:700;color:var(--ink);background:#fff}
+button:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible{outline-color:var(--blue)}
+.shell{background:#fff}
+.side{border-right:2px solid var(--line)}
+.context{border-left:2px solid var(--line);background:#fff}
+
+/* brand: same mark as the course shell */
+.brand{font-family:Nunito,sans-serif;color:var(--green);font-size:24px;font-weight:900;letter-spacing:-1.5px}
+.brand .owl-mini{display:inline-block;width:36px;height:36px;background:var(--green);border-radius:35% 35% 40% 40%;position:relative;flex:none}
+.brand .owl-mini:before,.brand .owl-mini:after{content:"";position:absolute;background:#fff;top:9px;width:11px;height:15px;border-radius:50%}
+.brand .owl-mini:before{left:6px}.brand .owl-mini:after{right:6px}
+.brand .owl-mini i:before,.brand .owl-mini i:after{content:"";position:absolute;background:#333;top:15px;width:4px;height:6px;border-radius:50%;z-index:1}
+.brand .owl-mini i:before{left:10px}.brand .owl-mini i:after{right:10px}
+.brand .logo-light{color:#6acb2b}
+
+/* navigation like the course sidebar */
+.side-label,.overline,.eyebrow,.micro,.stage-tag,.crumb{font-family:Nunito,sans-serif;font-weight:900;letter-spacing:.06em;color:var(--muted)}
+.nav button{font-family:Nunito,sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.04em;font-size:14px;color:#4b4b4b;border:2px solid transparent;border-radius:12px;background:none}
+.nav button:hover{background:#f7f7f7}
+.nav button.active{background:#ddf4ff;border-color:#84d8ff;color:var(--blue)}
+.nav-pill{background:var(--blue);color:#fff;border-radius:8px;font-weight:900}
+.mini-book{background:var(--green);color:#fff;border-radius:12px}
+
+/* headings */
+h1,h2,h3,.page-title{font-family:Nunito,sans-serif;font-weight:900;letter-spacing:-.02em;color:var(--ink)}
+.hero h1 em{color:var(--green);font-style:normal}
+
+/* cards: flat, rounded, 2px grey border */
+.hero{background:var(--green);border-radius:16px;border:0;border-bottom:4px solid var(--green-deep);color:#fff}
+.hero h1,.hero p,.hero .eyebrow,.hero-meta span{color:#fff}
+.hero h1 em{color:#d7ffb8}
+.hero-art .art-orbit{border-color:rgba(255,255,255,.35)}
+.hero-art .art-bubble{background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:16px;font-family:'Noto Sans KR',Nunito,sans-serif;font-weight:700;box-shadow:none}
+.hero-art .art-bubble.b{background:#ddf4ff;border-color:#84d8ff;color:#1453a3}
+.hero-art .art-cup{font-size:0}
+.hero-art .art-cup .lg-char{display:block}
+.stage,.card,.guide-panel,.compare-card,.review-callout,.source-note,.scenario-context{border:2px solid var(--line);border-radius:16px;box-shadow:none;background:#fff}
+.guide-panel.peach{background:#fff4e0;border-color:#ffd9a0}
+.stepper{background:#f7f7f7;border:2px solid var(--line);border-radius:14px}
+.stepper button{font-family:Nunito,sans-serif;font-weight:800;border-radius:10px}
+.stepper button.active,.stepper button[aria-current]{background:#fff;color:var(--blue);box-shadow:0 2px 0 var(--line)}
+.top-tag{background:#ddf4ff;color:var(--blue);border-radius:10px;font-weight:900}
+
+/* 3D buttons */
+.button{background:var(--green);color:#fff;border:0;border-bottom:4px solid var(--green-deep);border-radius:14px;font-family:Nunito,sans-serif;font-weight:900;letter-spacing:.06em;text-transform:uppercase;padding:13px 22px}
+.button:hover{filter:brightness(1.05)}
+.button:active{transform:translateY(2px);border-bottom-width:2px}
+.voice-btn,.help,.text-link,.example-chip{border:2px solid var(--line);border-bottom-width:4px;border-radius:14px;background:#fff;color:var(--blue);font-family:Nunito,sans-serif;font-weight:900;letter-spacing:.04em}
+.voice-btn:active,.help:active{transform:translateY(2px);border-bottom-width:2px}
+.text-link{border:0;padding:0;background:none}
+
+/* inputs */
+.answer-box,.attempt-box,select{border:2px solid var(--line);border-radius:14px;background:#f7f7f7;font-family:'Noto Sans KR',Nunito,sans-serif;font-weight:500;color:var(--ink)}
+.answer-box:focus{background:#fff;border-color:#84d8ff;outline:none}
+
+/* dialogue: character + speech bubble with tail, like Duolingo story/roleplay screens */
+.bubble-row{align-items:flex-end}
+.avatar{background:none!important;width:auto!important;height:auto!important;font-size:0;border:0!important}
+.avatar .lg-char{display:block}
+.speech{border:2px solid var(--line);border-radius:16px;background:#fff;position:relative}
+.speech:before{content:"";position:absolute;left:-10px;bottom:16px;width:14px;height:14px;background:#fff;border-left:2px solid var(--line);border-bottom:2px solid var(--line);transform:rotate(45deg)}
+.speech b{color:var(--muted);font-weight:900;letter-spacing:.06em}
+
+/* feedback measures: Duolingo answer colours */
+.measure{border:2px solid var(--line);border-radius:14px;background:#fff}
+.measure b{font-weight:900;letter-spacing:.06em}
+.measure.good{background:#d7ffb8;border-color:#a5ed6e}
+.measure.good p,.measure.good b{color:#58a700}
+.measure.needs{background:#ffdfe0;border-color:#ffb2b2}
+.measure.needs p,.measure.needs b{color:#ea2b2b}
+.measure.mixed{background:#fff5d3;border-color:#ffe08a}
+.measure.mixed p,.measure.mixed b{color:#cd7900}
+.coach{background:#ddf4ff;border:2px solid #84d8ff;border-radius:16px}
+.coach b{color:#1453a3;font-weight:900}
+.coach-icon{color:var(--blue)}
+.natural{color:#1453a3}
+.feedback-face{display:flex;align-items:center;gap:14px;margin:4px 0 12px}
+.feedback-face .lg-char{flex:none}
+
+footer{color:#afafaf;font-weight:800}
+/* override every Manrope/DM Sans use in bridge-style.css */
+.shell *:not(.korean):not([lang="ko"]){font-family:Nunito,'Noto Sans KR',system-ui,sans-serif}
+.korean,[lang="ko"]{font-family:'Noto Sans KR',Nunito,sans-serif}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "input": "커피을 한 잔 주세요.",
+    "error": "커피을",
+    "category": "object particle"
+  },
+  {
+    "id": 2,
+    "input": "아메리카노 한 잔를 주세요.",
+    "error": "잔를",
+    "category": "object particle"
+  },
+  {
+    "id": 3,
+    "input": "라떼 두 잔이 주세요.",
+    "error": "잔이",
+    "category": "object particle"
+  },
+  {
+    "id": 4,
+    "input": "저은 따뜻한 차를 원해요.",
+    "error": "저은",
+    "category": "topic particle"
+  },
+  {
+    "id": 5,
+    "input": "이 커피는 맛있어요요.",
+    "error": "맛있어요요",
+    "category": "duplicate polite ending"
+  },
+  {
+    "id": 6,
+    "input": "여기에 커피를 마실게요.",
+    "error": "여기에",
+    "category": "action location particle"
+  },
+  {
+    "id": 7,
+    "input": "저는 카페를에 갈 거예요.",
+    "error": "카페를에",
+    "category": "malformed destination particle"
+  },
+  {
+    "id": 8,
+    "input": "얼음를 빼 주세요.",
+    "error": "얼음를",
+    "category": "object particle"
+  },
+  {
+    "id": 9,
+    "input": "우유을 넣어 주세요.",
+    "error": "우유을",
+    "category": "object particle"
+  },
+  {
+    "id": 10,
+    "input": "설탕를 넣지 마세요.",
+    "error": "설탕를",
+    "category": "object particle"
+  },
+  {
+    "id": 11,
+    "input": "차가 너무 뜨겁어요.",
+    "error": "뜨겁어요",
+    "category": "irregular conjugation"
+  },
+  {
+    "id": 12,
+    "input": "아이스커피가 너무 차갑어요.",
+    "error": "차갑어요",
+    "category": "irregular conjugation"
+  },
+  {
+    "id": 13,
+    "input": "컵가 작아요.",
+    "error": "컵가",
+    "category": "subject particle"
+  },
+  {
+    "id": 14,
+    "input": "라떼이 얼마예요?",
+    "error": "라떼이",
+    "category": "subject particle"
+  },
+  {
+    "id": 15,
+    "input": "이것는 제 커피예요?",
+    "error": "이것는",
+    "category": "topic particle"
+  },
+  {
+    "id": 16,
+    "input": "그거을 포장해 주세요.",
+    "error": "그거을",
+    "category": "object particle"
+  },
+  {
+    "id": 17,
+    "input": "저는 커피를 마시고 싶어요습니다.",
+    "error": "싶어요습니다",
+    "category": "malformed ending"
+  },
+  {
+    "id": 18,
+    "input": "아메리카노 한 잔 주세요요.",
+    "error": "주세요요",
+    "category": "duplicate polite ending"
+  },
+  {
+    "id": 19,
+    "input": "저는 카드으로 계산할게요.",
+    "error": "카드으로",
+    "category": "instrument particle"
+  },
+  {
+    "id": 20,
+    "input": "저는 빵을 커피하고 같이 먹고 싶어해요.",
+    "error": "싶어해요",
+    "category": "first-person desire construction"
+  }
+]

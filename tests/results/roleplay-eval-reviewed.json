@@ -1,0 +1,157 @@
+{
+  "run_date": "2026-10-31T06:51:48.554Z",
+  "configured_model": "claude-opus-5-5 (default; no CLAUDE_MODEL override)",
+  "seed_count": 20,
+  "hasError_flags": 20,
+  "reviewed_seed_detections": 20,
+  "seed_detection_percent": 100,
+  "review_method": "Assistant reviewed original, corrected text and explanation against each planted error. All 20 target errors were corrected or explicitly explained. Not independent Korean-speaker validation.",
+  "limitations": [
+    "20 deliberately incorrect café replies only",
+    "No correct-sentence control set; false-positive rate unknown",
+    "No Duolingo paired model comparison",
+    "Not general language accuracy"
+  ],
+  "cases": [
+    {
+      "id": 1,
+      "seeded_error": "커피을",
+      "identified_seeded_error": true,
+      "corrected": "커피를 한 잔 주세요.",
+      "rationale": "The object particle depends on the last sound of the noun. Use 을 after a consonant and 를 after a vowel. 커피 ends in a vowel, so it takes 를."
+    },
+    {
+      "id": 2,
+      "seeded_error": "잔를",
+      "identified_seeded_error": true,
+      "corrected": "아메리카노 한 잔 주세요.",
+      "rationale": "잔 ends in a consonant, so the object particle would be 을 (한 잔을), not 를. In natural speech, the particle is usually dropped: 아메리카노 한 잔 주세요."
+    },
+    {
+      "id": 3,
+      "seeded_error": "잔이",
+      "identified_seeded_error": true,
+      "corrected": "라떼 두 잔 주세요.",
+      "rationale": "When ordering with a counter like 잔 (cups) before 주세요, leave off the subject particle 이. Just say \"두 잔 주세요.\""
+    },
+    {
+      "id": 4,
+      "seeded_error": "저은",
+      "identified_seeded_error": true,
+      "corrected": "저는 따뜻한 차를 원해요.",
+      "rationale": "After a word ending in a vowel like 저, use the topic particle 는, not 은. 은 follows a consonant."
+    },
+    {
+      "id": 5,
+      "seeded_error": "맛있어요요",
+      "identified_seeded_error": true,
+      "corrected": "이 커피는 맛있어요.",
+      "rationale": "The polite ending 요 was typed twice. You only need it once: 맛있어요. To order, you can say the drink name plus 주세요."
+    },
+    {
+      "id": 6,
+      "seeded_error": "여기에",
+      "identified_seeded_error": true,
+      "corrected": "여기서 커피를 마실게요.",
+      "rationale": "Use 에서 (shortened to 여기서) for the place where an action happens, like drinking. 에 is for where something exists or where you are going."
+    },
+    {
+      "id": 7,
+      "seeded_error": "카페를에",
+      "identified_seeded_error": true,
+      "corrected": "저는 카페에 갈 거예요.",
+      "rationale": "Use only one particle here. 에 marks the destination you are going to, so drop 를: 카페에 (to the café). Also, you are already in the café, so try ordering a drink next."
+    },
+    {
+      "id": 8,
+      "seeded_error": "얼음를",
+      "identified_seeded_error": true,
+      "corrected": "얼음을 빼 주세요.",
+      "rationale": "The object particle is 을 after a noun ending in a consonant, like 얼음, and 를 after a vowel. So it should be 얼음을."
+    },
+    {
+      "id": 9,
+      "seeded_error": "우유을",
+      "identified_seeded_error": true,
+      "corrected": "우유를 넣어 주세요.",
+      "rationale": "After a noun ending in a vowel, like 우유, use the object particle 를. Use 을 only after a consonant, as in 물을."
+    },
+    {
+      "id": 10,
+      "seeded_error": "설탕를",
+      "identified_seeded_error": true,
+      "corrected": "설탕을 넣지 마세요.",
+      "rationale": "설탕 ends in a consonant (ㅇ), so it takes the object particle 을, not 를. Use 를 only after nouns ending in a vowel."
+    },
+    {
+      "id": 11,
+      "seeded_error": "뜨겁어요",
+      "identified_seeded_error": true,
+      "corrected": "차가 너무 뜨거워요.",
+      "rationale": "뜨겁다 (to be hot) is an ㅂ-irregular verb. Before -어요, ㅂ changes to 우, so it becomes 뜨거워요."
+    },
+    {
+      "id": 12,
+      "seeded_error": "차갑어요",
+      "identified_seeded_error": true,
+      "corrected": "아이스커피가 너무 차가워요.",
+      "rationale": "차갑다 is an irregular ㅂ verb. Before -어요, the ㅂ changes to 우, so 차갑- + -어요 becomes 차가워요."
+    },
+    {
+      "id": 13,
+      "seeded_error": "컵가",
+      "identified_seeded_error": true,
+      "corrected": "컵이 작아요.",
+      "rationale": "The subject particle is 이 after a word ending in a consonant. Use 가 after a word ending in a vowel. Since 컵 ends in ㅂ, it should be 컵이."
+    },
+    {
+      "id": 14,
+      "seeded_error": "라떼이",
+      "identified_seeded_error": true,
+      "corrected": "라떼는 얼마예요?",
+      "rationale": "라떼 ends in a vowel, so the subject particle is 가, not 이 (라떼가). When asking a price, the topic particle 는 is more common (라떼는 얼마예요?)."
+    },
+    {
+      "id": 15,
+      "seeded_error": "이것는",
+      "identified_seeded_error": true,
+      "corrected": "이것은 제 커피예요?",
+      "rationale": "After a noun ending in a consonant (것), use the topic particle 은, not 는. In casual speech you can also say 이거 제 커피예요?"
+    },
+    {
+      "id": 16,
+      "seeded_error": "그거을",
+      "identified_seeded_error": true,
+      "corrected": "그거를 포장해 주세요.",
+      "rationale": "The object particle depends on the final sound of the noun. 그거 ends in a vowel, so use 를, not 을. In casual speech, 그걸 is also common."
+    },
+    {
+      "id": 17,
+      "seeded_error": "싶어요습니다",
+      "identified_seeded_error": true,
+      "corrected": "저는 커피를 마시고 싶어요.",
+      "rationale": "You combined two polite endings, -어요 and -습니다. Use only one: 싶어요 (polite, everyday) or 싶습니다 (formal). Both are correct on their own."
+    },
+    {
+      "id": 18,
+      "seeded_error": "주세요요",
+      "identified_seeded_error": true,
+      "corrected": "아메리카노 한 잔 주세요.",
+      "rationale": "There's an extra '요' at the end. 주세요 already includes the polite ending, so just say 주세요."
+    },
+    {
+      "id": 19,
+      "seeded_error": "카드으로",
+      "identified_seeded_error": true,
+      "corrected": "저는 카드로 계산할게요.",
+      "rationale": "After a noun ending in a vowel (카드), use '로' instead of '으로'. '으로' follows nouns ending in a consonant, except ㄹ."
+    },
+    {
+      "id": 20,
+      "seeded_error": "싶어해요",
+      "identified_seeded_error": true,
+      "corrected": "저는 빵을 커피하고 같이 먹고 싶어요.",
+      "rationale": "Use -고 싶어요 for your own wishes. -고 싶어해요 is used to describe what someone else wants."
+    }
+  ]
+}

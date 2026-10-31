@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Bridge turns a lesson phrase into a real conversation, with a chance to repair misunderstandings and try again.">
+  <title>Bridge — from lesson to conversation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bridge-style.css"><link rel="stylesheet" href="bridge-duo.css">
+<link rel="stylesheet" href="hints.css"><link rel="stylesheet" href="feedback.css"></head>
+<body>
+<div class="shell">
+  <aside class="side">
+    <a href="#" class="brand" id="brand" aria-label="Lingo Garden Bridge home"><span class="owl-mini"><i></i></span><span>lingo<span class="logo-light">garden</span></span></a>
+    <div class="side-label">YOUR WORKSPACE</div>
+    <nav aria-label="Primary navigation" class="nav">
+      <button data-page="practice" class="active"><span class="nav-icon">✦</span> Practice lab <span class="nav-pill">NEW</span></button>
+      <button data-page="guide"><span class="nav-icon">▤</span> Guidebook</button>
+      <button data-page="review"><span class="nav-icon">↻</span> Review & progress</button>
+      <button data-page="evidence"><span class="nav-icon">◈</span> Project evidence</button>
+    </nav>
+    <div class="side-bottom"><div class="mini-book">가</div><div><strong>Korean · Unit 6</strong><small>Discover a new city</small></div></div>
+    <div class="side-foot">A free, open source prototype<br>Built for Autonomous SG 2026</div>
+  </aside>
+  <main class="main">
+    <header class="topbar"><div class="crumb"><a href="/" style="color:inherit;text-decoration:none">← COURSE</a> <span>/</span> REAL-WORLD PRACTICE</div><div class="top-actions"><span class="top-tag">SEOUL · EVERYDAY SPEECH</span><button class="help" id="reset-btn" title="Reset demo" aria-label="Reset demo">↺</button></div></header>
+    <section id="page-practice" class="page">
+      <div class="hero"><div class="hero-copy"><div class="eyebrow"><span class="spark">✦</span> THE LESSON-TO-LIFE BRIDGE</div><h1>Knowing the phrase<br>is <em>just the start.</em></h1><p>Try it when a real person gets the wrong idea. Recover, retry, and see what changed.</p><div class="hero-meta"><span>● One real situation</span><span>● Two attempts</span><span>● One useful takeaway</span></div></div><div class="hero-art" aria-hidden="true"><div class="art-orbit one"></div><div class="art-orbit two"></div><div class="art-bubble a">포장해 드릴까요?</div><div class="art-bubble b">아니요, 여기서 먹을게요.</div><div class="art-cup" id="hero-char">☕</div><div class="art-stars">✦</div></div></div>
+      <div class="section-heading"><div><span class="overline">YOUR PRACTICE PATH</span><h2>From lesson to lived moment</h2></div><span class="flow-count" id="flow-count">01 / 04</span></div>
+      <div class="stepper" aria-label="Practice steps"><button data-step="guide" id="step-guide"><span>01</span> Learn the phrase</button><button data-step="attempt" id="step-attempt"><span>02</span> Enter the situation</button><button data-step="feedback" id="step-feedback"><span>03</span> Understand the gap</button><button data-step="compare" id="step-compare"><span>04</span> Try again & compare</button></div>
+      <div id="practice-stage" class="stage" aria-live="polite"></div>
+    </section>
+    <section id="page-guide" class="page hidden"></section>
+    <section id="page-review" class="page hidden"></section>
+    <section id="page-evidence" class="page hidden"></section>
+    <footer>BRIDGE PROTOTYPE <span>·</span> Content is curated for this one Korean scenario <span>·</span> Browser-local progress</footer>
+  </main>
+  <aside class="context"><div class="context-inner"><div class="context-top"><div class="context-icon">✦</div><span>WHY THIS EXISTS</span></div><h3>The moment after<br>the lesson.</h3><p>Duolingo’s Korean Guidebook explains <strong>-에</strong> and <strong>-에서</strong>. The observed exercise asks learners to assemble an English translation. Bridge asks whether they can use a location phrase to repair a misunderstanding with a shopkeeper.</p><div class="context-rule"></div><div class="source-note"><span class="source-num">01</span><div><strong>Observed in Safari</strong><small>Unit 6 Guidebook, one word-bank exercise, and the Practice Hub. Scope: this account and these screens only.</small></div></div><div class="source-note"><span class="source-num">02</span><div><strong>What Bridge tests</strong><small>Can the learner clarify “I’ll eat here” politely, then transfer the idea to a new café exchange?</small></div></div><button id="context-evidence" class="text-link">SEE THE OBSERVATION LOG ↗</button></div></aside>
+</div>
+<script src="characters.js"></script><script src="bridge-app.js"></script><script>document.getElementById('hero-char').innerHTML=LGCharacters.svg('clerk','happy',110)</script>
+<script src="hints.js"></script><script src="hangul.js"></script><script src="keyboard.js"></script></body></html>
